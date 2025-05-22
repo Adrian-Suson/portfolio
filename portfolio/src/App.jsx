@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink, Github, Mail, Linkedin, Download, ArrowRight, Code, Database, Cloud, Smartphone, Network, Wrench, MapPin, Phone } from 'lucide-react';
-import dp from "./assets/profile.PNG"
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,25 +45,25 @@ const Portfolio = () => {
       icon: <Code className="w-8 h-8" />,
       title: 'Full-Stack Development',
       description: 'React.js, PHP, Laravel, Node.js, Express.js, Firebase',
-      color: 'from-blue-400 to-blue-600'
+      color: 'from-red-600 to-red-400'
     },
     {
       icon: <Database className="w-8 h-8" />,
       title: 'Database Management',
       description: 'MySQL, SQL, Database Design, Normalization & Optimization',
-      color: 'from-green-400 to-green-600'
+      color: 'from-rose-600 to-rose-400'
     },
     {
       icon: <Network className="w-8 h-8" />,
       title: 'Networking & DevOps',
       description: 'PPPoE, Client-Server Config, Fiber Optics, Server Setup',
-      color: 'from-purple-400 to-purple-600'
+      color: 'from-orange-600 to-orange-400'
     },
     {
       icon: <Wrench className="w-8 h-8" />,
       title: 'Technical Support',
       description: 'Computer Assembly, Repair, Maintenance, IoT Development',
-      color: 'from-orange-400 to-orange-600'
+      color: 'from-amber-600 to-amber-400'
     }
   ];
 
@@ -139,7 +138,7 @@ const Portfolio = () => {
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
               Adrian.dev
             </div>
             
@@ -151,12 +150,12 @@ const Portfolio = () => {
                   onClick={() => scrollToSection(item.toLowerCase())}
                   className={`relative py-2 px-4 font-medium transition-all duration-300 group ${
                     activeSection === item.toLowerCase() 
-                      ? 'text-blue-400' 
+                      ? 'text-red-400' 
                       : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {item}
-                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-transform duration-300 ${
+                  <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-400 to-orange-300 transition-transform duration-300 ${
                     activeSection === item.toLowerCase() ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}></span>
                 </button>
@@ -194,16 +193,16 @@ const Portfolio = () => {
       {/* Dynamic Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent)] animate-pulse"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(255,119,198,0.3),transparent)] animate-pulse animation-delay-1000"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-red-900/20 to-orange-900/20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(185,28,28,0.3),transparent)] animate-pulse"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(251,146,60,0.3),transparent)] animate-pulse animation-delay-1000"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="text-5xl sm:text-6xl lg:text-8xl font-extrabold">
               <span className="block text-white">Adrian</span>
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-400 via-orange-400 to-orange-300 bg-clip-text text-transparent">
                 Suson
               </span>
             </h1>
@@ -219,7 +218,7 @@ const Portfolio = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-600">
               <button
                 onClick={() => scrollToSection('projects')}
-                className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2"
+                className="group bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2"
               >
                 <span>View My Work</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -227,7 +226,7 @@ const Portfolio = () => {
               
               <button
                 onClick={() => scrollToSection('contact')}
-                className="group border-2 border-gray-600 hover:border-blue-400 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-blue-400/10"
+                className="group border-2 border-gray-600 hover:border-red-400 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:bg-red-400/10"
               >
                 Get In Touch
               </button>
@@ -249,9 +248,9 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="relative w-80 h-80 mx-auto lg:mx-0">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
                 <img
-                  src={dp}
+                  src="/api/placeholder/400/400"
                   alt="Adrian Suson"
                   className="relative w-full h-full rounded-full object-cover border-4 border-gray-700 shadow-2xl"
                 />
@@ -261,11 +260,11 @@ const Portfolio = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
                     About Me
                   </span>
                 </h2>
-                <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-red-400 to-orange-300 rounded-full"></div>
               </div>
               
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
@@ -282,11 +281,11 @@ const Portfolio = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
                   <div className="flex items-center space-x-3 text-gray-400">
-                    <MapPin className="w-5 h-5 text-blue-400" />
+                    <MapPin className="w-5 h-5 text-red-400" />
                     <span>Zamboanga City, Philippines</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
-                    <Phone className="w-5 h-5 text-blue-400" />
+                    <Phone className="w-5 h-5 text-red-400" />
                     <span>09956202850</span>
                   </div>
                 </div>
@@ -295,7 +294,7 @@ const Portfolio = () => {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="/api/placeholder/400/320"
-                  className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+                  className="group bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
                 >
                   <Download className="w-5 h-5 group-hover:animate-bounce" />
                   <span>Download Resume</span>
@@ -303,7 +302,7 @@ const Portfolio = () => {
                 
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="border-2 border-gray-600 hover:border-blue-400 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-blue-400/10"
+                  className="border-2 border-gray-600 hover:border-red-400 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:bg-red-400/10"
                 >
                   Get In Touch
                 </button>
@@ -318,7 +317,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
                 My Expertise
               </span>
             </h2>
@@ -340,7 +339,7 @@ const Portfolio = () => {
                     {skill.icon}
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
                     {skill.title}
                   </h3>
                   
@@ -359,7 +358,7 @@ const Portfolio = () => {
               {['Git', 'GitHub', 'VS Code', 'Android Studio', 'XAMPP', 'Node.js', 'Composer'].map((tool, index) => (
                 <div
                   key={index}
-                  className="bg-gray-700/50 backdrop-blur-sm px-4 py-3 rounded-lg text-center text-gray-300 hover:text-blue-400 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gray-700/50 backdrop-blur-sm px-4 py-3 rounded-lg text-center text-gray-300 hover:text-red-400 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
                 >
                   {tool}
                 </div>
@@ -374,7 +373,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
                 Featured Projects
               </span>
             </h2>
@@ -398,7 +397,7 @@ const Portfolio = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
                   <div className="absolute top-4 left-4">
-                    <span className="bg-blue-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-red-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
                       {project.category}
                     </span>
                   </div>
@@ -410,7 +409,7 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-red-400 transition-colors">
                     {project.title}
                   </h3>
                   
@@ -422,7 +421,7 @@ const Portfolio = () => {
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-gray-700 text-blue-400 text-sm rounded-full border border-gray-600"
+                        className="px-3 py-1 bg-gray-700 text-red-400 text-sm rounded-full border border-gray-600"
                       >
                         {tech}
                       </span>
@@ -430,12 +429,12 @@ const Portfolio = () => {
                   </div>
                   
                   <div className="flex space-x-4">
-                    <button className="group/btn flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+                    <button className="group/btn flex items-center space-x-2 bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
                       <ExternalLink className="w-4 h-4 group-hover/btn:rotate-45 transition-transform" />
                       <span>View Project</span>
                     </button>
                     
-                    <button className="flex items-center space-x-2 border-2 border-gray-600 hover:border-blue-400 text-white px-6 py-3 rounded-full transition-all duration-300 hover:bg-blue-400/10">
+                    <button className="flex items-center space-x-2 border-2 border-gray-600 hover:border-red-400 text-white px-6 py-3 rounded-full transition-all duration-300 hover:bg-red-400/10">
                       <Github className="w-4 h-4" />
                       <span>Code</span>
                     </button>
@@ -459,7 +458,7 @@ const Portfolio = () => {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="bg-blue-600/90 backdrop-blur-sm text-white px-2 py-1 rounded text-xs font-medium">
+                    <span className="bg-red-600/90 backdrop-blur-sm text-white px-2 py-1 rounded text-xs font-medium">
                       {project.category}
                     </span>
                   </div>
@@ -471,7 +470,7 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-red-400 transition-colors">
                     {project.title}
                   </h3>
                   
@@ -483,7 +482,7 @@ const Portfolio = () => {
                     {project.tech.slice(0, 3).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded border border-gray-600"
+                        className="px-2 py-1 bg-gray-700 text-red-400 text-xs rounded border border-gray-600"
                       >
                         {tech}
                       </span>
@@ -496,12 +495,12 @@ const Portfolio = () => {
                   </div>
                   
                   <div className="flex space-x-3">
-                    <button className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                    <button className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm transition-colors">
                       <ExternalLink className="w-4 h-4" />
                       <span>View</span>
                     </button>
                     
-                    <button className="flex items-center space-x-2 border border-gray-600 hover:border-blue-400 text-white px-4 py-2 rounded-lg text-sm transition-colors">
+                    <button className="flex items-center space-x-2 border border-gray-600 hover:border-red-400 text-white px-4 py-2 rounded-lg text-sm transition-colors">
                       <Github className="w-4 h-4" />
                       <span>Code</span>
                     </button>
@@ -515,11 +514,11 @@ const Portfolio = () => {
 
       {/* Modern Contact Section */}
       <section id="contact" className="py-20 lg:py-32 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-orange-900/20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-6xl font-bold mb-8">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
               Let's Work Together
             </span>
           </h2>
@@ -531,24 +530,24 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <a
               href="mailto:suson.adrian.dr@gmail.com"
-              className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
+              className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-red-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
             >
-              <Mail className="w-12 h-12 text-blue-400 mb-4 mx-auto group-hover:scale-110 transition-transform" />
+              <Mail className="w-12 h-12 text-red-400 mb-4 mx-auto group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold text-white mb-2">Email</h3>
               <p className="text-gray-400">suson.adrian.dr@gmail.com</p>
             </a>
             
             <a
               href="tel:09956202850"
-              className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
+              className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-red-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
             >
-              <Phone className="w-12 h-12 text-blue-400 mb-4 mx-auto group-hover:scale-110 transition-transform" />
+              <Phone className="w-12 h-12 text-red-400 mb-4 mx-auto group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
               <p className="text-gray-400">09956202850</p>
             </a>
             
-            <div className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
-              <MapPin className="w-12 h-12 text-blue-400 mb-4 mx-auto group-hover:scale-110 transition-transform" />
+            <div className="group bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-red-400 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+              <MapPin className="w-12 h-12 text-red-400 mb-4 mx-auto group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold text-white mb-2">Location</h3>
               <p className="text-gray-400">Zamboanga City, Philippines</p>
             </div>
@@ -556,7 +555,7 @@ const Portfolio = () => {
           
           <button
             onClick={() => window.open('mailto:suson.adrian.dr@gmail.com')}
-            className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-3 mx-auto"
+            className="group bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-700 hover:to-orange-600 text-white font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-3 mx-auto"
           >
             <Mail className="w-6 h-6 group-hover:animate-bounce" />
             <span>Start a Project</span>
@@ -568,18 +567,18 @@ const Portfolio = () => {
       <footer className="bg-gray-900 border-t border-gray-800 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-4 md:mb-0">
+            <div className="text-2xl font-bold bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent mb-4 md:mb-0">
               Adrian.dev
             </div>
             
             <div className="flex space-x-6 mb-4 md:mb-0">
-              <a href="mailto:suson.adrian.dr@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="mailto:suson.adrian.dr@gmail.com" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
-              <a href="tel:09956202850" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="tel:09956202850" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Phone className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
             </div>
