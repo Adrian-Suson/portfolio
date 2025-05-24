@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ExternalLink, Github, Mail, Linkedin, Download, ArrowRight, Code, Database, Cloud, Smartphone, Network, Wrench, MapPin, Phone } from 'lucide-react';
+import profile from "./assets/SUSON, ADRIAN DR51860 copy.jpg"
 
 const Portfolio = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -247,10 +248,10 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="relative w-80 h-80 mx-auto lg:mx-0">
+              <div className="relative w-100 h-150 mx-auto lg:mx-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
                 <img
-                  src="/api/placeholder/400/400"
+                  src={profile}
                   alt="Adrian Suson"
                   className="relative w-full h-full rounded-full object-cover border-4 border-gray-700 shadow-2xl"
                 />
